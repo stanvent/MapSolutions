@@ -1,0 +1,156 @@
+G:\VS Projects\MapSolutions\MapSolutions\bin\MapSolutions.dll.config
+G:\VS Projects\MapSolutions\MapSolutions\bin\MapSolutions.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\MapSolutions.pdb
+G:\VS Projects\MapSolutions\MapSolutions\bin\Antlr3.Runtime.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\EntityFramework.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\EntityFramework.SqlServer.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.AspNet.Identity.Core.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.Cookies.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.Facebook.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.Google.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.OAuth.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.Twitter.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Web.Infrastructure.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Newtonsoft.Json.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Owin.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Net.Http.Formatting.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Helpers.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Http.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Http.WebHost.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Mvc.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Optimization.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Razor.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.WebPages.Deployment.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.WebPages.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.WebPages.Razor.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\WebGrease.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Net.Http.Formatting.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Http.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Http.WebHost.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Helpers.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Mvc.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Optimization.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.Razor.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.WebPages.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.WebPages.Deployment.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Web.WebPages.Razor.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Newtonsoft.Json.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Antlr3.Runtime.pdb
+G:\VS Projects\MapSolutions\MapSolutions\bin\EntityFramework.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\EntityFramework.SqlServer.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.AspNet.Identity.Core.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.Facebook.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.Cookies.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.OAuth.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.Google.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.Twitter.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\VS Projects\MapSolutions\MapSolutions\obj\Debug\MapSolutions.dll
+G:\VS Projects\MapSolutions\MapSolutions\obj\Debug\MapSolutions.pdb
+G:\VS Projects\MapSolutions\MapSolutions\bin\Castle.Core.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\Castle.Windsor.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\MapSolutions.Model.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\MapSolutions.Model.pdb
+G:\VS Projects\MapSolutions\MapSolutions\bin\Castle.Core.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\Castle.Windsor.xml
+G:\VS Projects\MapSolutions\MapSolutions\obj\Debug\MapSolutions.Web.csprojResolveAssemblyReference.cache
+G:\VS Projects\MapSolutions\MapSolutions\bin\MapSolutions.Common.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\MapSolutions.Common.pdb
+G:\VS Projects\MapSolutions\MapSolutions\bin\MapSolutions.Service.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\MapSolutions.Service.pdb
+G:\VS Projects\MapSolutions\MapSolutions\bin\LinqToTwitter.net.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Reactive.Linq.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Reactive.Core.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Reactive.Interfaces.dll
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Reactive.Linq.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Reactive.Core.xml
+G:\VS Projects\MapSolutions\MapSolutions\bin\System.Reactive.Interfaces.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.dll.config
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.pdb
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Antlr3.Runtime.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Castle.Core.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Castle.Windsor.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\EntityFramework.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\EntityFramework.SqlServer.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.Common.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.Model.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.Service.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.Google.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Web.Infrastructure.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Newtonsoft.Json.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Owin.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Net.Http.Formatting.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Helpers.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Http.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Http.WebHost.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Mvc.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Optimization.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Razor.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.WebPages.Deployment.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.WebPages.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.WebPages.Razor.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\WebGrease.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\LinqToTwitter.net.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Reactive.Linq.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Reactive.Core.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Reactive.Interfaces.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.Common.pdb
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.Model.pdb
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.Service.pdb
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Castle.Core.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Castle.Windsor.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Net.Http.Formatting.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Http.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Http.WebHost.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Helpers.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Mvc.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Optimization.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.Razor.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.WebPages.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.WebPages.Deployment.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Web.WebPages.Razor.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Newtonsoft.Json.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Antlr3.Runtime.pdb
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\EntityFramework.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\EntityFramework.SqlServer.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.Google.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Reactive.Linq.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Reactive.Core.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Reactive.Interfaces.xml
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\obj\Debug\MapSolutions.Web.csprojResolveAssemblyReference.cache
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\obj\Debug\MapSolutions.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\obj\Debug\MapSolutions.pdb

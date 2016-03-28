@@ -1,0 +1,40 @@
+﻿@using System.Configuration
+
+@{
+    ViewBag.Title = "About";
+}
+
+@{
+    var twitterServiceUrl = ConfigurationManager.AppSettings.Get("TwitterServiceUrl");
+}
+
+
+@section scripts {
+    <script type="text/javascript">
+        var baseurl = '@Url.Content("~/")'
+    </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript"
+       src="@Url.Content("~/scripts/twitterApi.js")">
+</script>
+}
+
+                <h2>About</h2>
+                <hr />
+<hr/>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="row placeholders">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" onclick="TestTwitter(); return false;" data-toggle="dropdown">Действие <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Действие</a></li>
+                <li><a href="#">Другое действие</a></li>
+                <li><a href="#">Что-то иное</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Отдельная ссылка</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+

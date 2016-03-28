@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "GoogleMapTweets";
+}
+
+@section scripts {
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCj9qncPO3kdmU2qYNRYS8kTrpf8_JDprs&sensor=false&extension=.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.min.js"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/scripts/twitterApi.js")"></script>
+    <script id="tweetTemplate" type="text/x-jsrender ">
+    <div>{{:#index+1}}: <b> {{:UserName}} </b> - {{:TweetBody}}</div>
+    </script>
+
+}
+
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 main">
+
+        <div class="col-sm-6" id="map-canvas"></div>
+
+
+        <!--<div class="col-md-10 " id="map-canvas"></div>-->
+
+        <div class="col-md-10 " id="mapControls">
+            <input id="radiusSlider" type="text" data-slider-min="1" data-slider-max="20" data-slider-step="1" data-slider-value="1" />
+            <span id="radiusLabel">Search radius (km): <span id="radiusVal">1</span></span>
+        </div>
+    </div>
+
+    <div class="col-sm-3 col-md-2" >
+        <div id="tweetContainer">
+            <div id="tweetList">
+
+            </div>
+        </div>
+        <!--<marquee id="tweetsList" scrollamount="3" behavior="scroll" direction="up">
+
+        </marquee>-->
+    </div>
+</div>
+<script>
+    $("#radiusSlider").slider();
+    $("#radiusSlider").on("slide", function(slideEvt) {
+        $("#radiusVal").text(slideEvt.value);
+    });
+</script>
+
+
+
+
