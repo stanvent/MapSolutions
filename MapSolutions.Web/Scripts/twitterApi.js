@@ -27,7 +27,6 @@ function initialize() {
     googleMap = map;
     map.addListener('click', function (event) {
         GetTweets(event.latLng.lat(), event.latLng.lng());
-        //alert('Lat: ' + event.latLng.lat() + '; Long: ' + event.latLng.lng() + '; Zoom: ' + map.getZoom());
     });
 };
 
@@ -89,25 +88,76 @@ function GetTweetsResponse(answer, lat, lng) {
     googleInfoWindow = infowindow;
     infowindow.open(googleMap);
     */
-    $("#tweetList").html($("#tweetTemplate").render(answer));
-    scrollTweets();
-  
+
+    var container = $('#tweet-container');
+
+    $('#twitter-ticker').slideDown('slow');
+    $("#tweet-container").empty();
+
+    if (answer && answer.length > 0) {
+
+        $.each(answer, function() {
+
+            var str = '	<div class="tweet">\
+						<div class="avatar"><a href="http://twitter.com/' + this.UserScreenName + '" target="_blank"><img src="' + this.ProfileImageUrl + '" /></a></div>\
+						<div class="user"><a href="http://twitter.com/' + this.UserScreenName + '" target="_blank">' + this.UserName + '</a></div>\
+						<div class="time">' + relativeTime(this.CreatedAt) + '</div>\
+						<div class="txt">' + formatTwitString(this.TweetBody) + '</div>\
+						</div>';
+
+            container.append(str);
+
+        });
+        scrollTweets(answer.length);
+    } else {
+        
+        var str = ' <div class="tweet"><div class="txt"> Tweets not found </div></div>';
+        container.append(str);
+    }
 }
 
-function scrollTweets() {
-    var $tweetList = $('#tweetList');//we'll re use it a lot, so better save it to a var.
-    $tweetList.serialScroll({
-        items: 'div',
-        duration: 2000,
-        force: true,
-        axis: 'y',
-        easing: 'linear',
-        lazy: true,// NOTE: it's set to true, meaning you can add/remove/reorder items and the changes are taken into account.
-        interval: 1, // yeah! I now added auto-scrolling
-        step: 2 // scroll 2 news each time
-    });
-   
+function formatTwitString(str){
+    str=' '+str;
+    str = str.replace(/((ftp|https?):\/\/([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?)/gm,'<a href="$1" target="_blank">$1</a>');
+    str = str.replace(/([^\w])\@([\w\-]+)/gm,'$1@<a href="http://twitter.com/$2" target="_blank">$2</a>');
+    str = str.replace(/([^\w])\#([\w\-]+)/gm,'$1<a href="http://twitter.com/search?q=%23$2" target="_blank">#$2</a>');
+    return str;
 }
+
+function relativeTime(pastTime) {
+    var tweetDate = new Date(pastTime);
+    var origStamp = Date.parse(pastTime);
+    var curDate = new Date();
+    var currentStamp = curDate.getTime();
+		
+    var difference = parseInt((currentStamp - origStamp)/1000);
+
+    if(difference < 0) return false;
+
+    if(difference <= 5)				return "Just now";
+    if(difference <= 20)			return "Seconds ago";
+    if(difference <= 60)			return "A minute ago";
+    if(difference < 3600)			return parseInt(difference/60)+" minutes ago";
+    if(difference <= 1.5*3600) 		return "One hour ago";
+    if(difference < 23.5*3600)		return Math.round(difference/3600)+" hours ago";
+    if (difference <= 1.5 * 24 * 3600) return "One day ago";
+
+    return tweetDate.getFullYear() + '-' + ('0' + (tweetDate.getMonth() + 1)).slice(-2) + '-' + ('0' + tweetDate.getDate()).slice(-2);
+
+}
+
+function scrollTweets(tweetsCount) {
+
+    var $tweetList = $('#tweet-container');
+    var interval = tweetsCount * 600;
+    $tweetList.scrollTo("max", interval,
+    {
+        axis: 'y',
+        interrupt: true
+
+});
+}
+
 
 function animateCircle(circle) {
     

@@ -2,6 +2,12 @@
     ViewBag.Title = "GoogleMapTweets";
 }
 
+@section Styles {
+    <link href="@Url.Content("~/css/twitter-controls.css")" rel="stylesheet">
+    <link href="@Url.Content("~/css/jScrollPane.css")" rel="stylesheet">
+
+}
+
 @section scripts {
 
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCj9qncPO3kdmU2qYNRYS8kTrpf8_JDprs&sensor=false&extension=.js"></script>
@@ -16,30 +22,25 @@
     </script>
 
 }
-
 <div class="row">
-    <div class="col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 main">
-
-        <div class="col-sm-6" id="map-canvas"></div>
-
-
-        <!--<div class="col-md-10 " id="map-canvas"></div>-->
-
-        <div class="col-md-10 " id="mapControls">
+    <div class="col-sm-5 col-sm-offset-3 col-md-7 col-md-offset-2 main">
+        <div class="col-sm-5" id="map-canvas"></div>
+        <div class="col-md-9 " id="mapControls">
             <input id="radiusSlider" type="text" data-slider-min="1" data-slider-max="20" data-slider-step="1" data-slider-value="1" />
             <span id="radiusLabel">Search radius (km): <span id="radiusVal">1</span></span>
         </div>
     </div>
-
-    <div class="col-sm-3 col-md-2" >
-        <div id="tweetContainer">
-            <div id="tweetList">
-
+    <div class="col-sm-2 col-md-3">
+        <div id="twitter-ticker">
+            <div id="top-bar">
+                <div id="twitIcon">
+                    <img src="../../img/twitter_64.png" width="64" height="64" alt="Twitter icon" />
+                </div>
+                <h2 class="tut">Tweet list</h2>
+            </div>
+            <div id="tweet-container">
             </div>
         </div>
-        <!--<marquee id="tweetsList" scrollamount="3" behavior="scroll" direction="up">
-
-        </marquee>-->
     </div>
 </div>
 <script>
@@ -48,6 +49,8 @@
         $("#radiusVal").text(slideEvt.value);
     });
 </script>
+<script src="@Url.Content("~/js/jquery.mousewheel.js")"></script>
+<script src="@Url.Content("~/js/jScrollPane.min.js")"></script>
 
 
 

@@ -40,7 +40,15 @@ namespace MapSolutions.Service.Implementations
 
             if (searchResponse != null && searchResponse.Statuses != null)
                 searchResponse.Statuses.ForEach(tweet =>
-                    listTweets.Add(new Tweet {TweetBody = tweet.Text, UserName = tweet.User.ScreenNameResponse}));
+                    listTweets.Add(new Tweet
+                    {
+                        TweetBody = tweet.Text, 
+                        UserName = tweet.User.Name, 
+                        UserScreenName = tweet.User.ScreenNameResponse,
+                        CreatedAt = tweet.CreatedAt,
+                        ProfileImageUrl = tweet.User.ProfileImageUrl
+                        
+                    }));
 
             return listTweets;
         }
