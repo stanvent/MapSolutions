@@ -34,9 +34,9 @@ function GetTweets(lat, lng) {
 
 
     searchRadius = parseInt($('#radiusSlider')[0].value);
-    
+    var searchPattern = $('#searchPattern')[0].value + '';
     //var rad = $("#radiusSlider").slider('getValue');
-    var reqParams = { Lat: lat, Lng: lng, Radius: searchRadius };
+    var reqParams = { Lat: lat, Lng: lng, Radius: searchRadius, SearchPattern: searchPattern };
 
     var strLatLng = JSON.stringify(reqParams);
     $.ajax({
@@ -149,7 +149,7 @@ function relativeTime(pastTime) {
 function scrollTweets(tweetsCount) {
 
     var $tweetList = $('#tweet-container');
-    var interval = tweetsCount * 600;
+    var interval = tweetsCount * 1200;
     $tweetList.scrollTo("max", interval,
     {
         axis: 'y',

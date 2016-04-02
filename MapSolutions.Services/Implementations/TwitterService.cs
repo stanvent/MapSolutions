@@ -27,13 +27,14 @@ namespace MapSolutions.Service.Implementations
             };
 
             var geocodeString = String.Format("{0},{1},{2}km", requestParams.Lat, requestParams.Lng, requestParams.Radius);
+            var queryStr = String.IsNullOrEmpty(requestParams.SearchPattern) ? "*" : requestParams.SearchPattern;
             var twitterCtx = new TwitterContext(auth);
             var searchResponse =
                 (from search in twitterCtx.Search
                     where search.Type == SearchType.Search &&
                           search.ResultType == ResultType.Recent &&
                           search.GeoCode == geocodeString &&
-                          search.Query == "*" &&
+                          search.Query == queryStr &&
                           search.Count == 100
                     select search)
                     .SingleOrDefault();

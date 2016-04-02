@@ -25,10 +25,20 @@
 <div class="row">
     <div class="col-sm-5 col-sm-offset-3 col-md-7 col-md-offset-2 main">
         <div class="col-sm-5" id="map-canvas"></div>
-        <div class="col-md-9 " id="mapControls">
-            <input id="radiusSlider" type="text" data-slider-min="1" data-slider-max="20" data-slider-step="1" data-slider-value="1" />
-            <span id="radiusLabel">Search radius (km): <span id="radiusVal">1</span></span>
+        <div class="col-md-9 ">
+            <div class="input-group">
+                &nbsp<input id="radiusSlider" type="text" data-slider-min="1" data-slider-max="20" data-slider-step="1" data-slider-value="1"/>
+                <span id="radiusLabel">&nbsp&nbspSearch radius (km): <span id="radiusVal">1</span></span>
+
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">Search pattern</span>
+                <input id="searchPattern" type="text" class="form-control" placeholder="...">
+            </div>
+
         </div>
+
     </div>
     <div class="col-sm-2 col-md-3">
         <div id="twitter-ticker">
