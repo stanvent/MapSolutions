@@ -154,3 +154,8 @@ G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\System.Reactive.Interfaces
 G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\obj\Debug\MapSolutions.Web.csprojResolveAssemblyReference.cache
 G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\obj\Debug\MapSolutions.dll
 G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\obj\Debug\MapSolutions.pdb
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\GeoJson.net2.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.Geo.Services.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\MapSolutions.Geo.Services.pdb
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Npgsql.dll
+G:\Freelance\GitHub\MapSolutions\MapSolutions.Web\bin\Npgsql.xml

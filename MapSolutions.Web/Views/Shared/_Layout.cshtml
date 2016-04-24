@@ -12,7 +12,10 @@
     <!-- Bootstrap core CSS -->
     <link href="@Url.Content("~/css/bootstrap.css")" rel="stylesheet">
     <link href="@Url.Content("~/css/dashboard.css")" rel="stylesheet">
+    <link href="@Url.Content("~/css/leftacc_menu.css")" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/css/bootstrap-slider.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     @RenderSection("Styles", false)
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -23,7 +26,6 @@
 
 <body>
 
-    
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -48,12 +50,50 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
+            
+            <!--
             <div class="dropdown">
-                <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#">
+                <a id="gmLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#">
                     Google Maps API Examples <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                    <li>@Html.ActionLink("Tweets by area", "GoogleMapTweets", "GoogleMapTweets")</li>
+                    <li class="active">@Html.ActionLink("Tweets by area", "GoogleMapTweets", "GoogleMapTweets")</li>
+                    <li>@Html.ActionLink("London traffic accidents analytics", "ExternalLayers", "ExternalLayers")</li>
+                    <li>@Html.ActionLink("London traffic accidents heatmaps", "ExternalLayers", "ExternalLayers")</li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <a id="olLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#">
+                    Open Layers API Examples <span class="caret"></span>
+                </a>
+
+            </div>
+            -->
+            <div id="cssmenu">
+                <ul>
+                    <li class='has-sub'>
+                        <a href='#'><span>Google Maps API Examples</span></a>
+                        <ul>
+                            <li>
+                                <span>@Html.ActionLink("Tweets by area", "GoogleMapTweets", "GoogleMapTweets")</span>
+                            </li>
+                            <li>
+                                <span>@Html.ActionLink("London traffic accidents analytics", "LondonTrafficAccidents", "LondonTrafficAccidents")</span>
+                            </li>
+                            <li class='last'>
+                                <span>@Html.ActionLink("London traffic accidents heatmaps", "LondonTrafficAccidentsHeatMaps", "LondonTrafficAccidentsHeatMaps")</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class='has-sub'>
+                        <a href='#'><span>Open Layers API Examples</span></a>
+                        <ul>
+                            <li class='has-sub'>
+                                
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -67,5 +107,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 <script src="~/Scripts/jsrender.min.js"></script>
 <script src="@Url.Content("~/js/bootstrap.js")"></script>
-</body>
+<script src="@Url.Content("~/js/leftacc_menu.js")"></script>
+        </body>
 </html>

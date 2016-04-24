@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\LatLngDTO.cs" />
+    <Compile Include="InstaRequestParams.cs" />
+    <Compile Include="LondonAccidents\AccidentInfo.cs" />
     <Compile Include="TweetRequestParams.cs" />
     <Compile Include="LatLng.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

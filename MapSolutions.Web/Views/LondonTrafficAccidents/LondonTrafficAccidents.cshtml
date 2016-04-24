@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "London Traffic Accidents";
+}
+
+
+@section Styles {
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+    <link href="@Url.Content("~/css/bootstrap-touchspin.css")" rel="stylesheet">
+}
+@section scripts {
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCj9qncPO3kdmU2qYNRYS8kTrpf8_JDprs&sensor=false&extension=.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.min.js"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/js/bootstrap-touchspin.js")"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/scripts/LondonTrafficAccidentsApi.js")"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/scripts/bootstrap-select.min.js")"></script>
+
+}
+
+<div class="row">
+    <div class="col-sm-5 col-sm-offset-3 col-md-9 col-md-offset-2 main">
+        <div class="col-md-9" id="map-canvas"></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Parameters:</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                        <form class="form-horizontal" role="form">
+                            <div class="col-md-2">
+                                <select class="selectpicker" data-width="auto" name="accident_year">
+                                    <option value="">Choose an year</option>
+                                    <option value="2006">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2006">2007</option>
+                                    <option value="2006">2008</option>
+                                    <option value="2006">2009</option>
+                                    <option value="2006">2010</option>
+                                    <option value="2006">2011</option>
+                                    <option value="2006">2012</option>
+                                    <option value="2006">2013</option>
+                                    <option value="2006">2014</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <input id="num_of_vehicles" type="text" value="1" name="num_of_vehicles">
+                            </div>
+                            <div class="col-md-3">
+                                <select class="selectpicker" title="Choose a vehicle type(s)" data-width="auto" name="vehicle_type" multiple>
+                                    <option value="1">Pedal cycle</option>
+                                    <option value="2">M/cycle 50cc and under</option>
+                                    <option value="3">M/cycle over 50cc and up to 125cc</option>
+                                    <option value="4">M/cycle over 125cc and up to 500cc</option>
+                                    <option value="5">Motorcycle over 500cc</option>
+                                    <option value="8">taxi/Private hire car</option>
+                                    <option value="9">car</option>
+                                    <option value="10">Minibus (8-16 passenger seats)</option>
+                                    <option value="11">Bus or coach (17 or more passenger seats)</option>
+                                    <option value="16">Ridden horse</option>
+                                    <option value="17">Agricultural vehicle (include diggers etc)</option>
+                                    <option value="18">Tram/Light rail</option>
+                                    <option value="19">Van - Goods vehicle 3.5 tonnes mgw and under</option>
+                                    <option value="20">Goods vehicle over 3.5 tonnes mgw and under 7.5 tonnes mgw</option>
+                                    <option value="21">Goods vehicle 7.5 tonnes mgw & over</option>
+                                    <option value="22">Mobility scooter</option>
+                                    <option value="23">Electric Motorcycle</option>
+                                    <option value="90">Other</option>
+                                    <option value="97">Motorcycle - cc unknown</option>
+                                    <option value="98">Goods vehicle - unknown weight</option>
+                                </select>
+                            </div>
+                        </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+
+    $("input[name='num_of_vehicles']").TouchSpin({
+        verticalbuttons: true,
+        min: 1,
+        max: 14,
+        prefix: 'Num of vehicles:'
+    });
+
+</script>
