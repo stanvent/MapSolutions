@@ -46,7 +46,7 @@ SELECT distinct(acc.accident_index) as accident_index, acc.longitude, acc.latitu
 
                 var queryStringBuilder = new StringBuilder();
 
-                queryStringBuilder.AppendFormat("SELECT acc.latitude, acc.longitude FROM lnd_accidents acc {0} where 1=1 ",
+                queryStringBuilder.AppendFormat("SELECT distinct(acc.accident_index), acc.latitude, acc.longitude FROM lnd_accidents acc {0} where 1=1 ",
                     vehicleTypes.Count>0?"":" inner join public.vehicles_full veh on veh.accident_index=acc.accident_index ");
 
                 if (accidentYear > 0)
@@ -68,7 +68,7 @@ SELECT distinct(acc.accident_index) as accident_index, acc.longitude, acc.latitu
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    coords.Add(new LatLng(Convert.ToDouble(reader[0]), Convert.ToDouble(reader[1])));
+                    coords.Add(new LatLng(Convert.ToDouble(reader[1]), Convert.ToDouble(reader[2])));
                 }
 
             }

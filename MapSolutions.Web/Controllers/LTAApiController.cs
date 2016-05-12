@@ -24,8 +24,12 @@ namespace MapSolutions.Controllers
         [EnableCors]
         [System.Web.Http.AcceptVerbs("GET", "POST")]
         [System.Web.Http.HttpPost]
-        public Geojson GetAccidentsGeoJson(int accidentYear, int numberOfVehicles, IList<string> vehicleTypes )
+        public Geojson GetAccidentsGeoJson(/*int accidentYear, int numberOfVehicles, IList<string> vehicleTypes */)
         {
+            int accidentYear = 2006;
+            int numberOfVehicles = 1;
+            IList<string> vehicleTypes = new List<string>();
+            
             return _londonAccService.GetAccidentsGeoJson(accidentYear, numberOfVehicles, vehicleTypes);
         }
     }

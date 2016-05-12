@@ -18,6 +18,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.min.js"></script>
 
+    <script type="text/javascript" src="@Url.Content("~/scripts/markerclusterer.js")"></script>
+
     <script type="text/javascript" src="@Url.Content("~/js/bootstrap-touchspin.js")"></script>
 
     <script type="text/javascript" src="@Url.Content("~/scripts/LondonTrafficAccidentsApi.js")"></script>
@@ -37,25 +39,25 @@
                 <div class="row">
                         <form class="form-horizontal" role="form">
                             <div class="col-md-2">
-                                <select class="selectpicker" data-width="auto" name="accident_year">
+                                <select class="selectpicker" data-width="auto" id="accident_year" name="accident_year" >
                                     <option value="">Choose an year</option>
-                                    <option value="2006">2005</option>
+                                    <option value="2005">2005</option>
                                     <option value="2006">2006</option>
-                                    <option value="2006">2007</option>
-                                    <option value="2006">2008</option>
-                                    <option value="2006">2009</option>
-                                    <option value="2006">2010</option>
-                                    <option value="2006">2011</option>
-                                    <option value="2006">2012</option>
-                                    <option value="2006">2013</option>
-                                    <option value="2006">2014</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
                                 </select>
                             </div>
                             <div class="col-md-3">
-                                <input id="num_of_vehicles" type="text" value="1" name="num_of_vehicles">
+                                <input id="num_of_vehicles" type="text" value="" name="num_of_vehicles">
                             </div>
                             <div class="col-md-3">
-                                <select class="selectpicker" title="Choose a vehicle type(s)" data-width="auto" name="vehicle_type" multiple>
+                                <select class="selectpicker" title="Choose a vehicle type(s)" data-width="auto" id="vehicle_type" name="vehicle_type" multiple>
                                     <option value="1">Pedal cycle</option>
                                     <option value="2">M/cycle 50cc and under</option>
                                     <option value="3">M/cycle over 50cc and up to 125cc</option>
@@ -88,12 +90,13 @@
 
 <script>
     
-
+    
     $("input[name='num_of_vehicles']").TouchSpin({
         verticalbuttons: true,
         min: 1,
         max: 14,
+        initval: "",
         prefix: 'Num of vehicles:'
-    });
-
+    }).on('touchspin.on.startspin', function () { overlay.draw(); });
+    
 </script>
