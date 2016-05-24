@@ -26,6 +26,8 @@ html, body, .container-fluid, .row, .map { height: 100% }
   margin-bottom: 15px;
   border: 2px solid #fff;
    position: relative;
+
+   /*background: transparent url(img/loading1.gif) no-repeat center center;*/
 }
 
 
@@ -198,3 +200,9 @@ html, body, .container-fluid, .row, .map { height: 100% }
 		margin-left: 5px;
 		display:inline;
 	}
+
+    #loading-indicator {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}

@@ -1,4 +1,5 @@
-﻿
+﻿@using System.Configuration
+
 @{
     ViewBag.Title = "London Traffic Accidents";
 }
@@ -89,14 +90,19 @@
 </div>
 
 <script>
-    
-    
-    $("input[name='num_of_vehicles']").TouchSpin({
-        verticalbuttons: true,
-        min: 1,
-        max: 14,
-        initval: "",
-        prefix: 'Num of vehicles:'
-    }).on('touchspin.on.startspin', function () { overlay.draw(); });
-    
+    @{
+        <text>
+    var mapServiceUrl = '@ConfigurationManager.AppSettings["GeoServerUrl"]';
+
+    var overlayLayer = 'WS_PostGIS:LondonAccidentsView';
+        </text>}
+
+         $("input[name='num_of_vehicles']").TouchSpin({
+            verticalbuttons: true,
+            min: 1,
+            max: 14,
+            initval: "",
+            prefix: 'Num of vehicles:'
+        }).on('touchspin.on.startspin', function () { overlay.draw(); });
+
 </script>
