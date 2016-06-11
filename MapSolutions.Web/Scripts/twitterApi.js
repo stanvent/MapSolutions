@@ -20,7 +20,11 @@ function initialize() {
     var mapOptions = {
         center: latlng,
         scrollWheel: false,
-        zoom: 5
+        zoom: 5,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoomControl: true,
+        streetViewControl: false,
+        draggableCursor: 'default'
     };
 
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);

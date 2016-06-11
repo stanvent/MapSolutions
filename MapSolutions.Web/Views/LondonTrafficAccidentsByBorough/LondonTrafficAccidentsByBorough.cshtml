@@ -1,7 +1,7 @@
 ﻿@using System.Configuration
 
 @{
-    ViewBag.Title = "London Traffic Accidents HeatMaps";
+    ViewBag.Title = "London Traffic Accidents By Borough";
 }
 
 
@@ -23,7 +23,7 @@
 
     <script type="text/javascript" src="@Url.Content("~/js/bootstrap-touchspin.js")"></script>
 
-    <script type="text/javascript" src="@Url.Content("~/scripts/LondonTrafficAccidentsApi.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/scripts/LondonTrafficAccidentsByBoroughApi.js")"></script>
 
     <script type="text/javascript" src="@Url.Content("~/scripts/bootstrap-select.min.js")"></script>
 
@@ -90,21 +90,14 @@
 </div>
 
 <script>
-    @{
-        <text>
-    var mapServiceUrl = '@ConfigurationManager.AppSettings["GeoServerUrl"]';
-
-    var overlayLayer = 'WS_PostGIS:LondonAccidentsHeatmap';
-        </text>}
-
-
-
+    
          $("input[name='num_of_vehicles']").TouchSpin({
             verticalbuttons: true,
             min: 1,
             max: 14,
             initval: "",
             prefix: 'Num of vehicles:'
-        }).on('touchspin.on.startspin', function () { overlay.draw(); });
+         }).on('touchspin.on.startspin', function () { LoadAccidents(); });
 
 </script>
+

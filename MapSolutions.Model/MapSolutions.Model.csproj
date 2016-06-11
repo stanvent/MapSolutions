@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccidentsRequestParams.cs" />
     <Compile Include="DTO\LatLngDTO.cs" />
     <Compile Include="InstaRequestParams.cs" />
     <Compile Include="LondonAccidents\AccidentInfo.cs" />

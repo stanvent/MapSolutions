@@ -26,7 +26,8 @@ function initialize() {
         zoom: 10,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         zoomControl: true,
-        streetViewControl: false
+        streetViewControl: false,
+        draggableCursor: 'default'
     };
 
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
@@ -38,6 +39,7 @@ function initialize() {
     map.addListener('tilesloaded', SetOverlay());
     map.addListener('dragend', function () { overlay.draw(); });
     
+
     //ShowAccidentsLayer();
 
    /* 
@@ -198,10 +200,11 @@ function GetImageUrl(bounds, width, height) {
 
     var pYear = $("#accident_year").val();
     var pNumv = $("#num_of_vehicles").val();
-    var pVehTypes = $("#vehicle_type").val() || [];
+    var pVehType = $("#vehicle_type").val();
+    //var pVehTypes = $("#vehicle_type").val() || [];
     var viewparams = "";
 
-    if (pYear || pNumv || pVehTypes.length > 0) {
+    if (pYear || pNumv || pVehType) {
         viewparams = "&viewparams=";
 
         if (pYear) {
@@ -212,9 +215,14 @@ function GetImageUrl(bounds, width, height) {
             viewparams += 'pNumv:' + pNumv + ';';
         }
 
-        if (pVehTypes.length > 0) {
+        /*if (pVehTypes.length > 0) {
             var sTypes = pVehTypes.join("|");
             viewparams += 'pVehTypes:' + '\'' + sTypes + '\'';
+        }*/
+
+        if (pVehType) {
+            //viewparams += 'pVehType:' + '\'' + pVehType + '\'' + ';';
+            viewparams += 'pVehType:' + pVehType + ';';
         }
 
     }
