@@ -71,7 +71,7 @@ function initialize() {
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(divInfo);
 
 
-    var divLoading = document.createElement('divLoading');
+    var divLoading = document.createElement('div');
     divLoading.style.position = 'absolute';
     divLoading.style.verticalAlign = 'middle';
     divLoading.style.textAlign = 'center';

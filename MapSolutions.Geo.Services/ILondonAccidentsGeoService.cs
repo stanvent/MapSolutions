@@ -12,5 +12,7 @@ namespace MapSolutions.Geo.Services
         Geojson GetAccidentsGeoJson(int accidentYear, int numberOfVehicles, IList<string> vehicleTypes);
 
         string GetAccidentsByBoroughGeoJson(int accidentYear, int numberOfVehicles, int vehicleType);
+
+        string GetAccidentsByMonthsGeoJson(int accidentYear, int accidentMonth);
     }
 }

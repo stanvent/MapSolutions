@@ -47,5 +47,18 @@ namespace MapSolutions.Controllers
             */
             return _londonAccService.GetAccidentsByBoroughGeoJson(accidentsRequestParams.accYear, accidentsRequestParams.numVehicles, accidentsRequestParams.vehicleType);
         }
+
+        [EnableCors]
+        [System.Web.Http.AcceptVerbs("GET", "POST")]
+        [System.Web.Http.HttpPost]
+        public string GetAccidentsByMonths(AccidentsByMonthsReqParams accidentsByMonthsReqParams)
+        {
+            /*
+            int accidentYear = 2006;
+            int numberOfVehicles = 1;
+            IList<string> vehicleTypes = new List<string>();
+            */
+            return _londonAccService.GetAccidentsByMonthsGeoJson(accidentsByMonthsReqParams.accYear, accidentsByMonthsReqParams.accMonth);
+        }
     }
 }

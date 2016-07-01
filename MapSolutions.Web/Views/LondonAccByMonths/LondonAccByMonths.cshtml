@@ -1,0 +1,91 @@
+﻿@using System.Configuration
+
+@{
+    ViewBag.Title = "London Traffic Accidents By Months";
+}
+
+
+@section Styles {
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.11.2/css/ol.css" type="text/css">
+    
+}
+
+@section scripts {
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.min.js"></script>
+
+    <script src="http://openlayers.org/en/v3.11.2/build/ol.js"></script>
+<script type="text/javascript" src="@Url.Content("~/scripts/LondonTrafficAccByMonthsApi.js")"></script>
+
+<script type="text/javascript" src="@Url.Content("~/js/bootstrap-touchspin.js")"></script>
+
+<script type="text/javascript" src="@Url.Content("~/scripts/bootstrap-select.min.js")"></script>
+
+}
+
+
+<div class="row">
+    <div class="col-sm-5 col-sm-offset-3 col-md-9 col-md-offset-2 main">
+        <div class="col-md-9" id="map-canvas"></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Parameters:</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <form class="form-horizontal" role="form">
+                        <div class="col-md-2">
+                            <select class="selectpicker" data-width="auto" id="accident_year" name="accident_year">
+                                <option value="">Choose an year</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="col-md-4">
+                            <div class="input-group" id="sliderDiv">
+                                <input id="monthSlider" type="text" data-slider-min="1" data-slider-max="12" data-slider-step="1" data-slider-value="1"/>
+                                <span id="monthLabel">&nbsp&nbsp Month: <span id="monthVal">1</span></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $("#monthSlider").slider();
+    $("#monthSlider").on("slide", function(slideEvt) {
+        $("#monthVal").text(slideEvt.value);
+        //LoadAccidentsJSON();
+    });
+    $("#monthSlider").on("slideStop", function (slideEvt) {
+        $("#monthVal").text(slideEvt.value);
+
+        LoadAccidentsJSON();
+    });
+    @{
+        <text>
+    var mapServiceUrl = '@ConfigurationManager.AppSettings["GeoServerUrl"]';
+    
+
+        </text>}
+
+
+</script>

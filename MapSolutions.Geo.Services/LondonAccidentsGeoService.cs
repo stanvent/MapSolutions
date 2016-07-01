@@ -87,7 +87,7 @@ SELECT distinct(acc.accident_index) as accident_index, acc.longitude, acc.latitu
                 var queryStringBuilderMain = new StringBuilder();
 
                 var queryStringBuilderSub = new StringBuilder();
-
+               
                 queryStringBuilderMain.Append("SELECT row_to_json(fc)" +
                     " FROM ( SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features" +
                     " FROM (SELECT 'Feature' As type" +
@@ -119,6 +119,29 @@ SELECT distinct(acc.accident_index) as accident_index, acc.longitude, acc.latitu
                 var command = new NpgsqlCommand(queryStringBuilderMain.ToString(), conn);
                 geoJsonResult = Convert.ToString(command.ExecuteScalar());
                
+            }
+            return geoJsonResult;
+        }
+
+        public string GetAccidentsByMonthsGeoJson(int accidentYear, int accidentMonth)
+        {
+
+            string geoJsonResult;
+            using (var conn = new NpgsqlConnection(_connectionString))
+            {
+                conn.Open();
+
+                var queryStringBuilderMain = new StringBuilder();
+
+                
+                queryStringBuilderMain.AppendFormat("SELECT row_to_json(fc) " +
+                                                    " FROM ( SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features FROM " +
+                                                    " (SELECT 'Feature' As type , ST_AsGeoJSON(lg.location)::json As geometry " +
+                                                    " FROM (select acc.location from public.lnd_accidents acc  where acc.acc_year={0} AND acc.acc_month={1}) " +
+                                                    " As lg   ) As f )  As fc;", accidentYear, accidentMonth);
+                var command = new NpgsqlCommand(queryStringBuilderMain.ToString(), conn);
+                geoJsonResult = Convert.ToString(command.ExecuteScalar());
+
             }
             return geoJsonResult;
         }

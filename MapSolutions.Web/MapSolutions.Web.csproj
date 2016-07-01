@@ -185,6 +185,7 @@
     <Compile Include="CastleDI\DependencyInstaller.cs" />
     <Compile Include="CastleDI\WindsorActivator.cs" />
     <Compile Include="Context\ApplicationDataContext.cs" />
+    <Compile Include="Controllers\LondonAccByMonthsController.cs" />
     <Compile Include="Controllers\LondonTrafficAccidentsByBoroughController.cs" />
     <Compile Include="Controllers\LondonTrafficAccidentsHeatMapsController.cs" />
     <Compile Include="Controllers\LondonTrafficAccidentsController.cs" />
@@ -295,6 +296,7 @@
     <Content Include="Scripts\i18n\defaults-zh_CN.min.js" />
     <Content Include="Scripts\i18n\defaults-zh_TW.js" />
     <Content Include="Scripts\i18n\defaults-zh_TW.min.js" />
+    <Content Include="Scripts\LondonTrafficAccByMonthsApi.js" />
     <Content Include="Scripts\LondonTrafficAccidentsByBoroughApi.js" />
     <Content Include="Scripts\LondonTrafficAccidentsApi.js" />
     <Content Include="Scripts\jquery-tmpl.jquery.json" />
@@ -329,6 +331,7 @@
     <Content Include="Views\LondonTrafficAccidents\LondonTrafficAccidents.cshtml" />
     <Content Include="Views\LondonTrafficAccidentsHeatMaps\LondonTrafficAccidentsHeatMaps.cshtml" />
     <Content Include="Views\LondonTrafficAccidentsByBorough\LondonTrafficAccidentsByBorough.cshtml" />
+    <Content Include="Views\LondonAccByMonths\LondonAccByMonths.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
