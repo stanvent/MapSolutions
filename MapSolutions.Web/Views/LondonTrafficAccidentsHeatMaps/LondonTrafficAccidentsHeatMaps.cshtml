@@ -58,7 +58,8 @@
                             <input id="num_of_vehicles" type="text" value="" name="num_of_vehicles">
                         </div>
                         <div class="col-md-3">
-                            <select class="selectpicker" title="Choose a vehicle type(s)" data-width="auto" id="vehicle_type" name="vehicle_type">
+                            <select class="selectpicker" title="Choose a vehicle type" data-width="auto" id="vehicle_type" name="vehicle_type">
+                                <option value="0">Choose a vehicle type</option>
                                 <option value="1">Pedal cycle</option>
                                 <option value="2">M/cycle 50cc and under</option>
                                 <option value="3">M/cycle over 50cc and up to 125cc</option>
@@ -83,7 +84,15 @@
                         </div>
                     </form>
                 </div>
+                <p class="text-justify text-info">
+                    <br />
+                    This heat map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years.
+                    Users can filter data by years, number of vehicles and vehicles types.
+                </p>
 
+                <p class="text-justify text-danger">
+                    Used Technologies: Google Maps API, PostgreSQL(PostGis), GeoServer, JQuery.
+                </p>
             </div>
         </div>
     </div>

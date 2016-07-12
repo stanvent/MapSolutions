@@ -39,8 +39,8 @@ function initialize() {
             strokeWeight: 2
         });
 
-        var strInfo = '<span> Borough name: ' + event.feature.getProperty('name') + '; </span>';
-        strInfo += '<span> Accidents count: ' + event.feature.getProperty('acc_count') + '; </span>';
+        var strInfo = ' <span style:padding = 5px> Borough name: ' + event.feature.getProperty('name') + '; </span> ';
+        strInfo += ' <span> Accidents count: ' + event.feature.getProperty('acc_count') + '; </span> ';
         $('#boroughInfo').html(strInfo);
     });
 
@@ -66,7 +66,7 @@ function initialize() {
     divInfo.style.position = 'absolute';
     divInfo.style.backgroundColor = 'rgba(255, 0, 0, 0.8);';
     divInfo.style.fontSize = '16px';
-    
+    //divInfo.style.padding = '10px';
    
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(divInfo);
 
@@ -101,7 +101,6 @@ function initialize() {
     map.controls[google.maps.ControlPosition.LEFT_CENTER].push(divLoading);
     $('#overlayMapImageLoading').show();
    
-
 };
 
 

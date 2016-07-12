@@ -4,37 +4,79 @@
     ViewBag.Title = "About";
 }
 
-@{
-    var twitterServiceUrl = ConfigurationManager.AppSettings.Get("TwitterServiceUrl");
-}
-
 
 @section scripts {
     <script type="text/javascript">
         var baseurl = '@Url.Content("~/")'
     </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script type="text/javascript"
-       src="@Url.Content("~/scripts/twitterApi.js")">
-</script>
+
 }
 
-                <h2>About</h2>
-                <hr />
-<hr/>
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+
+<div class="col-sm-6 col-sm-offset-4 main">
     <div class="row placeholders">
-        <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" onclick="TestTwitter(); return false;" data-toggle="dropdown">Действие <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Действие</a></li>
-                <li><a href="#">Другое действие</a></li>
-                <li><a href="#">Что-то иное</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Отдельная ссылка</a></li>
-            </ul>
+        <h2>About me</h2>
+
+        <hr/>
+        <div class="pull-right" style="padding: 5px">
+            <img src="/img/mainphoto.jpg" class="img-rounded">
         </div>
+        <p class="text-justify text-muted">
+            My name is <b>Stan Ventsel</b>.
+            <br />
+        </p>
+
+        <p class="text-justify text-muted">
+            I am an IT professional with over 15 years of full lifecycle experience in C#, ASP.NET, WCF, ArcGIS, Google Maps API, MS SQL Server, Oracle, and many more. Completed many projects on my own as well as a team member.
+        </p>
+        <p class="text-justify text-muted">
+            Strong knowledge of object-oriented concept, design patterns and GIS technologies;
+            Good knowledge of relational databases(including spatial extensions), source control systems and unit testing.
+        </p>
+        <p class="text-justify text-muted">
+            I have experience working with international clients. I'm thorough in analyzing client requirements, drive a logical and efficient decision-making processes.
+        </p>
+        <p class="text-justify text-muted">
+            I am passionate about Software Development and System Architecture. I'm constantly striving to improve my skills be it through independent learning and development of small side projects.
+            <br/><br/>
+        </p>
+        <p class="text-justify text-muted">
+            My full CV is <a href="https://www.linkedin.com/in/stan-ventsel-861513123">here</a>.
+            <br /><br />
+        </p>
+        <p class="text-left text-danger lead">
+            I'm currently available for freelance work, so don't hesitate to e-mail me at <a href="mailto:stanvent.develop@gmail.com">stanvent.develop@gmail.com</a>.
+        </p>
+        <hr />
+        <p class="text-justify text-danger lead">
+            Technical Skill Set:
+            <br />
+        </p>
+        <p class="text-justify text-success">
+            <b>Programming Languages:</b> C# 2.0 - 5.0, T-SQL, PL/SQL;<br /><br />
+
+            <b>Scripting Languages:</b> JavaScript, HTML, XML;<br /><br />
+
+            <b>Technologies:</b> ASP.NET 2.0/3.5/4.5, WCF, ADO.Net, JQuery, WPF, Silverlight, LINQ;<br /><br />
+
+            <b>GIS:</b> Google Maps API, ArcGis (ArcGIS Server, ArcSDE, ArcGIS Engine, ArcGIS Runtime), PostGIS, GeoServer, OpenLayers;<br /><br />
+
+            <b>Database Platforms:</b> MS SQL Server 2005/2012 , Oracle 9i/11g, PostgreSQL;<br /><br />
+
+            <b>Frameworks:</b> .NET Framework 2.0/3.5/4.5;<br /><br />
+
+            <b>Version control systems:</b> SVN, Git, TFS, StarTeam;<br /><br />
+
+            <b>Bug-tracking systems:</b> JIRA, ClearQuest;<br /><br />
+
+            <b>Tools:</b> Visual Studio 2003-2013, SQL Server Management Studio, Oracle PL/Sql Developer, Crystal Report.<br /><br />
+            <br/>
+            And many others..
+        </p>
+        <hr />
     </div>
-</div>
+</div> 
 
 

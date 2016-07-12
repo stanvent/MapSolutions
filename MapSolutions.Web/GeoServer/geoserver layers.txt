@@ -1,0 +1,9 @@
+﻿
+1. LondonAccidentsView1
+    select distinct(acc.accident_index), acc.location, acc.gid, acc.num_vehicles from lnd_accidents acc where (%pYear%=0 or acc.acc_year=%pYear%) and (%pNumv%=0 or acc.num_vehicles=%pNumv%) and (%pVehType%=0 or acc.accident_index in (select veh.accident_index from public.vehicles_full veh where veh.vehicle_type_int=%pVehType%))
+
+	LondonAccidentsView1(new)
+	select distinct(acc.accident_index), acc.location, acc.gid, acc.num_vehicles from lnd_accidents acc 
+left join public.vehicles_full veh on veh.accident_index=acc.accident_index 
+ where (%pYear%=0 or acc.acc_year=%pYear%) and (%pNumv%=0 or acc.num_vehicles=%pNumv%) and (%pVehType%=0 or veh.vehicle_type_int=%pVehType%)
+

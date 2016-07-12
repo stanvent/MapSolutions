@@ -216,9 +216,16 @@
     <Content Include="css\twitter-controls.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GeoServer\geoserver layers.txt" />
     <Content Include="Global.asax" />
+    <Content Include="img\GMAcc.jpg" />
+    <Content Include="img\GMAccBorough.jpg" />
+    <Content Include="img\GMAccHeatmap.jpg" />
+    <Content Include="img\GMTweets.jpg" />
     <Content Include="img\loading.gif" />
     <Content Include="img\loading1.gif" />
+    <Content Include="img\mainphoto.jpg" />
+    <Content Include="img\OLAccMonth.jpg" />
     <Content Include="img\slickbg.png" />
     <Content Include="img\top_bar.png" />
     <Content Include="img\transparent.png" />
@@ -229,6 +236,7 @@
     <Content Include="Scripts\bootstrap-select.js" />
     <Content Include="Scripts\bootstrap-select.js.map" />
     <Content Include="Content\bootstrap-select.css.map" />
+    <None Include="Properties\PublishProfiles\Publish MapSolutions.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="js\jquery.mousewheel.js" />
     <Content Include="js\jScrollPane.min.js" />
@@ -332,6 +340,8 @@
     <Content Include="Views\LondonTrafficAccidentsHeatMaps\LondonTrafficAccidentsHeatMaps.cshtml" />
     <Content Include="Views\LondonTrafficAccidentsByBorough\LondonTrafficAccidentsByBorough.cshtml" />
     <Content Include="Views\LondonAccByMonths\LondonAccByMonths.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Examples.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

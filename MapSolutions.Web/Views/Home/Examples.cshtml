@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "Examples";
+}
+
+
+@section scripts {
+    <script type="text/javascript">
+        var baseurl = '@Url.Content("~/")'
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+}
+
+<div class="col-sm-7 col-sm-offset-3 main">
+
+    <div class="row placeholders">
+        <h2>Examples</h2>
+        <hr />
+        <p class="text-justify text-muted">
+            Here is some examples of using technologies, such as:
+        </p><p class="text-justify text-danger">
+            Google Maps API, Open Layers, GeoServer, MVC Web API, PosrgerSQL(PostGIS) etc..
+        </p>
+        <hr />
+        <div class="col-sm-12">
+            <div class="col-sm-4">
+                <a href="@Url.Action("GoogleMapTweets", "GoogleMapTweets")">
+                    <img src="/img/GMTweets.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h4>Getting tweets by Twitter users locations</h4>
+                <p class="text-justify text-muted">
+                    <br/>
+                    This example demonstrates how to get the list of tweets by the users location inside the certain radius.
+                </p>
+                <p class="text-justify text-danger">
+                    Used Technologies: Google Maps API, Twitter API, MVC Web API.
+                </p>
+                <p class ="text-justify">
+                    <a class="btn" href="@Url.Action("GoogleMapTweets", "GoogleMapTweets")">View details »</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-12"><hr /></div>
+
+        <div class="col-sm-12">
+            <div class="col-sm-4">
+                <a href="@Url.Action("LondonTrafficAccidents", "LondonTrafficAccidents")">
+                    <img src="/img/GMAcc.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h4>Full statistics of London traffic accidents between 2005 and 2014 years.</h4>
+                <p class="text-justify text-muted">
+                    <br />
+                    This map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years.
+                    Users can filter data by years, number of vehicles and vehicles types.
+                </p>
+                
+                <p class="text-justify text-danger">
+                    Used Technologies: Google Maps API, PostgreSQL(PostGis), GeoServer, JQuery.
+                </p>
+                <p class="text-justify">
+                    <a class="btn" href="@Url.Action("LondonTrafficAccidents", "LondonTrafficAccidents")">View details »</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-12"><hr /></div>
+        <div class="col-sm-12">
+
+            <div class="col-sm-4">
+                <a href="@Url.Action("LondonTrafficAccidentsHeatMaps", "LondonTrafficAccidentsHeatMaps")">
+                    <img src="/img/GMAccHeatMap.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h4>Heat map of London traffic accidents between 2005 and 2014 years.</h4>
+
+                <p class="text-justify text-muted">
+                    <br/>
+                    This heat map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years.
+                    Users can filter data by years, number of vehicles and vehicles types.
+                </p>
+
+                <p class="text-justify text-danger">
+                    Used Technologies: Google Maps API, PostgreSQL(PostGis), GeoServer, JQuery.
+                </p>
+                <p class="text-justify">
+                    <a class="btn" href="@Url.Action("LondonTrafficAccidentsHeatMaps", "LondonTrafficAccidentsHeatMaps")">View details »</a>
+                </p>
+               
+            </div>
+        </div>
+
+        <div class="col-sm-12"><hr/></div>
+
+        <div class="col-sm-12">
+            <div class="col-sm-4">
+                <a href="@Url.Action("LondonTrafficAccidentsByBorough", "LondonTrafficAccidentsByBorough")">
+                    <img src="/img/GMAccBorough.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h4>The map of London traffic accidents, grouped by boroughs.</h4>
+
+                <p class="text-justify text-muted">
+                    <br/>
+                    This map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years, grouped by borougs
+                    Users can filter data by years, number of vehicles and vehicles types.
+                </p>
+
+                <p class="text-justify text-danger">
+                    Used Technologies: Google Maps API, PostgreSQL(PostGis), MVC Web API, JQuery.
+                </p>
+                <p class="text-justify">
+                    <a class="btn" href="@Url.Action("LondonTrafficAccidentsByBorough", "LondonTrafficAccidentsByBorough")">View details »</a>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col-sm-12"><hr/></div>
+
+        <div class="col-sm-12">
+            <div class="col-sm-4">
+                <a href="@Url.Action("LondonAccByMonths", "LondonAccByMonths")">
+                    <img src="/img/OLAccMonth.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h4>The map of London traffic accidents, grouped by months.</h4>
+
+                <p class="text-justify text-muted">
+                    <br/>
+                    This map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years, grouped by months
+                    Users can filter data by years, number of vehicles and vehicles types.
+                </p>
+                <p class="text-justify text-danger">
+                    Used Technologies: OpenLayers API, PostgreSQL(PostGis), MVC Web API, JQuery.
+                </p>
+                <p class="text-justify">
+                    <a class="btn" href="@Url.Action("LondonAccByMonths", "LondonAccByMonths")">View details »</a>
+                </p>
+                
+            </div>
+        </div>
+
+        <div class="col-sm-12"><hr/></div>
+
+    </div>
+</div>
