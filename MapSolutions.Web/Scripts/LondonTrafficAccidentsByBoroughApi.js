@@ -64,7 +64,8 @@ function initialize() {
     divInfo.style.borderStyle = 'none';
     divInfo.style.borderWidth = '0px';
     divInfo.style.position = 'absolute';
-    divInfo.style.backgroundColor = 'rgba(255, 0, 0, 0.8);';
+    divInfo.style.backgroundColor = '#ff6666';
+    //divInfo.style.backgroundColor = 'rgba(255, 0, 0, 0.8);';
     divInfo.style.fontSize = '16px';
     //divInfo.style.padding = '10px';
    

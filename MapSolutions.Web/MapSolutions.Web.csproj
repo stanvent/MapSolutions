@@ -215,6 +215,7 @@
     <Content Include="css\leftacc_menu.css" />
     <Content Include="css\twitter-controls.css" />
     <Content Include="favicon.ico" />
+    <Content Include="favicons\favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GeoServer\geoserver layers.txt" />
     <Content Include="Global.asax" />
