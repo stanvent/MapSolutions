@@ -4,6 +4,7 @@ var googleMap;
 var googleInfoWindow;
 var searchRadius;
 var searchCircle;
+var searchMarker;
 
 $(document).ready(function () {
 
@@ -24,7 +25,7 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         zoomControl: true,
         streetViewControl: false,
-        draggableCursor: 'default'
+        draggableCursor: 'crosshair'
     };
 
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
@@ -35,6 +36,37 @@ function initialize() {
 };
 
 function GetTweets(lat, lng) {
+
+    if (searchCircle)
+        searchCircle.setMap(null);
+
+    if (searchMarker)
+        searchMarker.setMap(null);
+
+    var center = new google.maps.LatLng(lat, lng);
+
+    searchCircle = new google.maps.Circle({
+        center: center,
+        radius: 0,
+        strokeColor: "#E16D65",
+        strokeOpacity: 1,
+        strokeWeight: 2,
+        fillColor: "#E16D65",
+        fillOpacity: 0.3,
+        clickable: false
+    });
+
+    searchMarker = new google.maps.Marker({
+        
+        draggable: false,
+        animation: google.maps.Animation.BOUNCE,
+        position: { lat: lat, lng: lng }
+    });
+
+    searchMarker.setMap(googleMap);
+    searchCircle.setMap(googleMap);
+
+    animateCircle(searchCircle);
 
 
     searchRadius = parseInt($('#radiusSlider')[0].value);
@@ -60,24 +92,7 @@ function GetTweets(lat, lng) {
 
 function GetTweetsResponse(answer, lat, lng) {
 
-    if (searchCircle)
-        searchCircle.setMap(null);
-
-    var center = new google.maps.LatLng(lat, lng);
-
-     searchCircle = new google.maps.Circle({
-        center: center,
-        radius: 0,
-        strokeColor: "#E16D65",
-        strokeOpacity: 1,
-        strokeWeight: 2,
-        fillColor: "#E16D65",
-        fillOpacity: 0.3,
-        clickable: false
-    });
-     searchCircle.setMap(googleMap);
-     animateCircle(searchCircle);
-
+    
     
     /*if (googleInfoWindow)
         googleInfoWindow.close();
