@@ -247,7 +247,7 @@ function GetImageUrl(bounds, width, height) {
 
             url += "&env=cell_size:" + GetCellSize(zoom);
         } else {
-            url += "&styles=AccidentPointStyle"; //use default style
+            url += "&styles=AccidentPointStyle";
         }
     }
 
