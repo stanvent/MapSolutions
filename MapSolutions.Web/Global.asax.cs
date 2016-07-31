@@ -67,9 +67,10 @@ namespace MapSolutions
                 }
                 */
 
-                var userIp = HttpContext.Current.Request.UserHostAddress;
+                var userIp = context.Request.UserHostAddress;
                 var host = context.Request.UserHostAddress;
-                var refer = context.Request.UrlReferrer;
+                //var refer = context.Request.UrlReferrer;
+                string refer = context.Request.UrlReferrer == null ? "" : context.Request.UrlReferrer.AbsoluteUri;
 
                 string url = "http://freegeoip.net/json/" + userIp;
                 WebClient client = new WebClient();
