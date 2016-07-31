@@ -18,7 +18,7 @@
         <h2>Examples</h2>
         <hr />
         <p class="text-justify">
-            Here is some examples of using technologies, such as:
+            Here are some examples of using technologies, such as:
         </p><p class="text-justify text-danger">
             Google Maps API, Open Layers, GeoServer, MVC Web API, PosrgerSQL(PostGIS) etc..
         </p>
@@ -30,10 +30,17 @@
                 </a>
             </div>
             <div class="col-sm-8">
-                <h4>Getting tweets by Twitter users locations</h4>
+                <h4>Geotagged tweets search </h4>
                 <p class="text-justify">
                     <br />
-                    This example demonstrates how to get the list of tweets by the users location inside the certain radius.
+                    In this example, I used Google Maps API and Twitter API capabilities to allow users to search geotagged tweets.
+                    <br />
+                    The search is performed inside the user-defined radius up to 20 km. The list of found tweets is limited to 100 tweets (Twitter API limitation).
+                    <br />
+                    Also, users can define a search string.
+                    <br />
+                    This tool is suitable for monitoring what people are saying about events, accidents, etc... that happened in a specified area.
+                    <br />
                 </p>
                 <p class="text-justify text-danger">
                     Used Technologies: Google Maps API, Twitter API, MVC Web API.
@@ -53,13 +60,19 @@
                 </a>
             </div>
             <div class="col-sm-8">
-                <h4>Full statistics of London traffic accidents between 2005 and 2014 years.</h4>
+                <h4>Map of London traffic accidents between 2005 and 2014.</h4>
                 <p class="text-justify">
                     <br />
-                    This map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years.
-                    Users can filter data by years, number of vehicles and vehicles types.
+                    In this example, I demonstrate how Google Maps API can interact with remote services to display layers which contain a large number of objects.
+                    <br />
+                    It's impossible to use client Google Maps framework for rendering more than 300.000 objects due to performance and memory limitations.
+                    So I moved all data, all spatial queries and rendering (including data clustering for the big zoom) to server side. 
+                    The server back-end includes geodata storage - DB Postgre SQL and geodata publisher - GeoServer.
+                    <br />
+                    The clients Google Maps framework requests the GeoServer and display received image as Overlay layer. 
+                    <br />
+                    The users can filter data by year, by number of vehicles and by vehicle types.
                 </p>
-
                 <p class="text-justify text-danger">
                     Used Technologies: Google Maps API, PostgreSQL(PostGis), GeoServer, JQuery.
                 </p>
@@ -78,12 +91,17 @@
                 </a>
             </div>
             <div class="col-sm-8">
-                <h4>Heat map of London traffic accidents between 2005 and 2014 years.</h4>
+                <h4>Heat map of London traffic accidents between 2005 and 2014..</h4>
 
                 <p class="text-justify">
                     <br />
-                    This heat map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years.
-                    Users can filter data by years, number of vehicles and vehicles types.
+                    In this example, I demonstrate how to build a dynamic parameterized heat-map "on-the-fly".
+                    The heatmap is based on very large objects and thus all computing must be performed on the server-side. 
+                    The server back-end includes geodata storage - DB Postgre SQL and geodata publisher - GeoServer.
+                    <br />
+                    The clients Google Maps framework requests the GeoServer and display received image as Overlay layer.
+                    <br />
+                    The users can filter data by year, by number of vehicles and by vehicle types.
                 </p>
 
                 <p class="text-justify text-danger">
@@ -105,12 +123,13 @@
                 </a>
             </div>
             <div class="col-sm-8">
-                <h4>The map of London traffic accidents, grouped by boroughs.</h4>
-
+                <h4>Map of London traffic accidents, grouped by boroughs.</h4>
                 <p class="text-justify">
                     <br />
-                    This map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years, grouped by borougs
-                    Users can filter data by years, number of vehicles and vehicles types.
+                    In this example, I demonstrate how to make custom geodata service for use in Google Maps.
+                    I created a service which computes the number of accidents for every borough and returns the result as an attributed polygons list. 
+                    <br />
+                    The users can filter data by year, by number of vehicles and by vehicle types.
                 </p>
 
                 <p class="text-justify text-danger">
@@ -132,12 +151,15 @@
                 </a>
             </div>
             <div class="col-sm-8">
-                <h4>The map of London traffic accidents, grouped by months.</h4>
+                <h4>Dynamic heat maps of monthly changes.</h4>
 
                 <p class="text-justify">
                     <br />
-                    This map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years, grouped by months
-                    Users can filter data by years, number of vehicles and vehicles types.
+                    This example demonstrates animated heat maps of numbers of accidents by months.
+                    The heat maps compute on the server-side by using the Postgre SQL as storage and the GeoServer as publisher.
+                    <br />
+                    The user can choose a specific year and look at the morphing heat maps slide-show, which is displayed with OpenLayers API. 
+                    Every heat map shows the monthly info of traffic accidents.
                 </p>
                 <p class="text-justify text-danger">
                     Used Technologies: OpenLayers API, PostgreSQL(PostGis), MVC Web API, JQuery.

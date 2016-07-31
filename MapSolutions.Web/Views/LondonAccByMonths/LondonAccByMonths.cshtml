@@ -1,7 +1,7 @@
 ﻿@using System.Configuration
 
 @{
-    ViewBag.Title = "London Traffic Accidents By Months";
+    ViewBag.Title = "Monthly changes dynamic heat maps.";
 }
 
 
@@ -64,8 +64,11 @@
                 </div>
                 <p class="text-justify">
                     <br />
-                    This map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years, grouped by months
-                    Users can filter data by years, number of vehicles and vehicles types.
+                    This example demonstrates animated heat maps of numbers of accidents by months.
+                    The heat maps compute on the server-side by using the Postgre SQL as storage and the GeoServer as publisher.
+                    <br />
+                    The user can choose a specific year and look at the morphing heat maps slide-show, which is displayed with OpenLayers API.
+                    Every heat map shows the monthly info of traffic accidents.
                 </p>
                 <p class="text-justify text-danger">
                     Used Technologies: OpenLayers API, PostgreSQL(PostGis), MVC Web API, JQuery.

@@ -1,7 +1,7 @@
 ﻿@using System.Configuration
 
 @{
-    ViewBag.Title = "London Traffic Accidents HeatMaps";
+    ViewBag.Title = "Heat map of London traffic Accidents";
 }
 
 
@@ -86,8 +86,13 @@
                 </div>
                 <p class="text-justify">
                     <br />
-                    This heat map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years.
-                    Users can filter data by years, number of vehicles and vehicles types.
+                    In this example, I demonstrate how to build a dynamic parameterized heat-map "on-the-fly".
+                    The heatmap is based on very large objects and thus all computing must be performed on the server-side.
+                    The server back-end includes geodata storage - DB Postgre SQL and geodata publisher - GeoServer.
+                    <br />
+                    The clients Google Maps framework requests the GeoServer and display received image as Overlay layer.
+                    <br />
+                    The users can filter data by year, by number of vehicles and by vehicle types.
                 </p>
 
                 <p class="text-justify text-danger">

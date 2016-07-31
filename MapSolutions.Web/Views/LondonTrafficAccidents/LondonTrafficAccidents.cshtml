@@ -1,7 +1,7 @@
 ﻿@using System.Configuration
 
 @{
-    ViewBag.Title = "London Traffic Accidents";
+    ViewBag.Title = "Map of London traffic accidents";
 }
 
 
@@ -86,10 +86,16 @@
                 </div>
                 <p class="text-justify">
                     <br />
-                    This map shows info about more than 300.000 traffic accidents occured in London between 2005 and 2014 years.
-                    Users can filter data by years, number of vehicles and vehicles types.
+                    In this example, I demonstrate how Google Maps API can interact with remote services to display layers which contain a large number of objects.
+                    <br />
+                    It's impossible to use client Google Maps framework for rendering more than 300.000 objects due to performance and memory limitations.
+                    So I moved all data, all spatial queries and rendering (including data clustering for the big zoom) to server side.
+                    The server back-end includes geodata storage - DB Postgre SQL and geodata publisher - GeoServer.
+                    <br />
+                    The clients Google Maps framework requests the GeoServer and display received image as Overlay layer.
+                    <br />
+                    The users can filter data by year, by number of vehicles and by vehicle types.
                 </p>
-
                 <p class="text-justify text-danger">
                     Used Technologies: Google Maps API, PostgreSQL(PostGis), GeoServer, JQuery.
                 </p>

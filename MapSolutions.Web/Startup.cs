@@ -1,5 +1,7 @@
 ﻿using Microsoft.Owin;
+using Microsoft.Owin.Logging;
 using Owin;
+using NLog.Web;
 
 [assembly: OwinStartupAttribute(typeof(MapSolutions.Startup))]
 namespace MapSolutions

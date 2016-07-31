@@ -5,7 +5,7 @@ var googleInfoWindow;
 var searchRadius;
 var searchCircle;
 var searchMarker;
-
+var imgLoading;
 $(document).ready(function () {
 
     
@@ -33,9 +33,27 @@ function initialize() {
     map.addListener('click', function (event) {
         GetTweets(event.latLng.lat(), event.latLng.lng());
     });
+
+    imgLoading = document.createElement('img');
+
+    imgLoading.id = 'imageLoading';
+    imgLoading.style.alt = 'Loading...';
+    imgLoading.style.display = 'inline-block';
+    imgLoading.style.verticalAlign = 'middle';
+    imgLoading.style.width = '100%';
+    imgLoading.src = '/img/prgbar_ani.gif';
+
+    $('#tweet-container').append(imgLoading);
+    $('#imageLoading').hide();
 };
 
 function GetTweets(lat, lng) {
+
+    
+    $("#tweet-container").empty();
+    $('#tweet-container').append(imgLoading);
+
+    $('#imageLoading').show();
 
     if (searchCircle)
         searchCircle.setMap(null);
@@ -83,9 +101,11 @@ function GetTweets(lat, lng) {
         contentType: "application/json; charset=utf-8",
         success: function(data) {
             GetTweetsResponse(data, lat, lng);
+
         },
         error: function(x, y, z) {
             alert(x + "\n" + y + "\n" + z);
+            $('#imageLoading').hide();
         }
     });
 }
@@ -93,7 +113,7 @@ function GetTweets(lat, lng) {
 function GetTweetsResponse(answer, lat, lng) {
 
     
-    
+    $('#imageLoading').hide();
     /*if (googleInfoWindow)
         googleInfoWindow.close();
 
@@ -111,7 +131,7 @@ function GetTweetsResponse(answer, lat, lng) {
     var container = $('#tweet-container');
 
     $('#twitter-ticker').slideDown('slow');
-    $("#tweet-container").empty();
+   //("#tweet-container").empty();
 
     if (answer && answer.length > 0) {
 
